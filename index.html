@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portifolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="overlay"></div>
+        <div class="image"></div>
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portifolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi I'm <span>Shivan</span> <br>Kagoya from Kampala</h1>
+            </div>
+        </div>
+    </div>
+    <!-----about----->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h>
+                        <p style=" font-size: medium;">Hello everyone your welcome to my first portifolio website ,<br>please navigate to findout more interesting features.<br>And profile about me and what i do.<br> I promise you its interrractive and exciting mwaa.<br>Enjoy!!!!!!!!!!</p>
+                        <div class="tab-tittles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents"id="skills" >
+                            <ul style="font-size: medium;">
+                                <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>App Development</span><br>Building Androi/iOS apps</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents active-tab" id="Experience">
+                            <ul style="font-size: medium;">
+                                <li><span>2023 - current</span><br>UI/UX Design and Web app Development Training At luyanzi Institute of Technology</li>
+                                <li><span>2022 - 2023</span><br>Team lead at LIT</li>
+                                <li><span>2020 - 2022</span><br>Internship at IMC</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents"id="Education" >
+                            <ul style="font-size: medium;">
+                                <li><span>2024</span><br>UI/UX Design and Web app Development Training At luyanzi Institute of Technology</li>
+                                <li><span>2019</span><br>UACE fron Jsss</li>
+                                <li><span>2017</span><br>UCE from Jsss</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                console.log(tablink.classlist)
+                tablink.classlist.remove("active-link");
+                console.log("active link changed");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-tab");
+                console.log("active tab changed");
+            }
+            event.currentTarget.classlist.add("active-link");
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
